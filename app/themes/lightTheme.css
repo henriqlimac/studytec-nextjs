@@ -1,0 +1,10 @@
+html[data-theme="light"] {
+  --color-primary: theme("colors.slate.50");
+  --color-secondary: theme("colors.slate.100");
+  --color-typography: theme("colors.slate.950");
+  --color-description: theme("colors.slate.900");
+  --color-border: rgba(0, 0, 0 ,0);
+  --shadow: rgba(0, 0, 0, 0.050)
+  --linv: inline-block;
+  --lvis: hidden;
+}
