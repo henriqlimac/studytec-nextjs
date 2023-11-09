@@ -14,7 +14,7 @@ export default async function UsersLayout({
     <ThemeContext>
       <div className="w-full min-h-screen bg-secondary text-typography">
         <Navbar currentUser={currentUser!} />
-        <main className={`xl:ml-[220px] transition-all overflow-hidden`}>
+        <main className={`xl:ml-[220px] transition-all overflow-hidden scroll-smooth`}>
           {children}
           {/* arrumar o children para passar o "currentUser" nele */}
         </main>

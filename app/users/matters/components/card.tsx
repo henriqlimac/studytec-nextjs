@@ -9,7 +9,7 @@ interface MattersCardProps {
 
 export default function MattersCard({ matter, color, button }: MattersCardProps) {
   return (
-    <Card className={`max-w-[400px] bg-primary text-typography rounded-md py-4`}>
+    <Card className={`max-w-[400px] bg-primary text-typography rounded-md py-4 shadow-sm`}>
       <CardBody className="flex flex-col gap-4">
         <h1 className={`font-semibold text-xl uppercase tracking-tight ${color}`}>{matter}</h1>
         <p className="text-sm font-medium">

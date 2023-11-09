@@ -12,7 +12,8 @@ import logo from "@/public/logo.svg";
 
 import NavItem from "./navitem";
 import UserActions from "./actions";
-import { Button, Link } from "@nextui-org/react";
+import Link from "next/link";
+import { Button } from "@nextui-org/react";
 
 interface NavbarProps {
   currentUser: User;
@@ -65,13 +66,11 @@ export default function Navbar({ currentUser }: NavbarProps) {
             {currentUser.isPremium ? (
               ""
             ) : (
-              <Link href="/users/premium-plans">
-                <Button
-                  fullWidth
-                  className="bg-success text-white font-semibold"
-                >
-                  QUERO SER PREMIUM!
-                </Button>
+              <Link
+                href="/users/premium-plans"
+                className="w-full bg-success text-sm flex justify-center items-center py-2 rounded-xl hover:bg-success-500 transition"
+              >
+                QUERO SER PREMIUM!
               </Link>
             )}
             <p className="text-center text-xs opacity-50">

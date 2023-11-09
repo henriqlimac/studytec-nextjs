@@ -1,7 +1,8 @@
 "use client";
 
 import { IoSparklesSharp } from "react-icons/io5";
-import { Button, Link } from "@nextui-org/react";
+import Link from "next/link";
+import { Button } from "@nextui-org/react";
 import "../themes/animations.css";
 import Banner from "./components/banner";
 import Progress from "./components/progress";
@@ -119,13 +120,11 @@ export default function Users({ currentUser }: LandingProps) {
               "Básico" até o "Premium Plus". Está interessado? Clique no botão
               abaixo para saber mais.
             </p>
-            <Link className="w-full" href="/users/premium-plans">
-              <Button
-                className="tracking-wider font-medium bg-success text-white"
-                fullWidth
-              >
-                QUERO SER PREMIUM!
-              </Button>
+            <Link
+              href="/users/premium-plans"
+              className="w-full bg-success text-sm font-semibold flex justify-center items-center py-2 rounded-xl hover:bg-success-500 transition"
+            >
+              QUERO SER PREMIUM!
             </Link>
             <IoSparklesSharp className="absolute right-[-16px] top-[-12px] fill-amber-400 text-3xl" />
           </div>

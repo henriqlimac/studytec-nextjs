@@ -6,8 +6,8 @@ import { useForm, FieldValues, SubmitHandler } from "react-hook-form";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import toast from "react-hot-toast";
-import { Button, Divider, Input } from "@nextui-org/react";
-import ThemeSwitcher from "../../components/themeSwitcher";
+import { Divider, Input } from "@nextui-org/react";
+import ThemeSwitcher from "./themeSwitcher";
 import Image from "next/image";
 import { CldUploadButton } from "next-cloudinary";
 import { useState } from "react";
@@ -54,7 +54,7 @@ export default function UserInfo({ currentUser }: UserInfoProps) {
   };
 
   return (
-    <div className="bg-primary p-4 rounded-md h-full md:h-auto md:max-w-[450px] w-full flex flex-col gap-7 border-1 border-border shadow-shadow shadow-lg">
+    <div className="bg-primary p-4 rounded-md h-full md:h-auto md:max-w-[450px] w-full flex flex-col justify-center gap-7 border-1 border-border shadow-shadow shadow-lg">
       <div className="w-full flex justify-between">
         <div>
           <h2 className="font-semibold">Perfil</h2>

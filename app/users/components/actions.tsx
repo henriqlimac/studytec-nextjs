@@ -74,7 +74,7 @@ export default function UserActions({ currentUser }: NavbarProps) {
               setOpenDropdown(!openDropdown);
             }}
           >
-            <BiChevronDown className="w-6 h-6" />
+            <BiChevronDown className={`w-6 h-6 transition ${openDropdown ? "rotate-90" : ""}`} />
           </button>
           <div
             className={`absolute right-4 top-12 ${
@@ -86,7 +86,7 @@ export default function UserActions({ currentUser }: NavbarProps) {
               <button
                 className="flex items-center gap-2 cursor-pointer px-2 py-3 text-start hover:bg-secondary rounded-lg select-none"
                 onClick={() => {
-                  router.push("/users/configs");
+                  router.push("/configs");
                   setOpenDropdown(false);
                 }}
               >

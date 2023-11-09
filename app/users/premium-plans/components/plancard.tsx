@@ -72,7 +72,7 @@ export default function PlanCard({
           Psicólogo online
         </li>
       </ul>
-      <Button fullWidth disabled={disabled} className={`h-full font-bold ${disabled ? "" : "bg-success"}`}>{disabled ? "JÁ POSSUI!" : "COMEÇAR O MEU PLANO"}</Button>
+      <Button fullWidth disabled={disabled} className={`h-full font-bold ${disabled ? "" : "bg-success text-white"}`}>{disabled ? "JÁ POSSUI!" : "COMEÇAR O MEU PLANO"}</Button>
       <IoSparklesSharp className={`absolute right-[-16px] top-[-12px] ${color} text-3xl`} />
     </div>
   );
