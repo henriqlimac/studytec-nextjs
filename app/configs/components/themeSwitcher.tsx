@@ -25,7 +25,7 @@ enum Theme {
   highContrast = "highContrast",
 }
 
-export default function themeSwitcher() {
+export default function ThemeSwitcher() {
   const [selectedOption, setSelectedOption]: any = useState(new Set([localStorage.getItem(themeStorageKey) || "light"]));
 
   const [theme, setTheme] = useState<string>(localStorage.getItem(themeStorageKey) || Theme.light);
