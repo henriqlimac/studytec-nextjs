@@ -108,9 +108,6 @@ export default function Users() {
               ))}
             </ul>
           </div>
-          {/* {currentUser.isPremium ? (
-            ""
-          ) : ( */}
           <div className="w-full lg:max-w-[400px] bg-primary rounded-lg flex flex-col justify-center items-center gap-6 p-10 text-center relative">
             <h2 className="text-2xl font-semibold">Ainda não é Premium?</h2>
             <p className="text-[0.90rem]">
@@ -126,7 +123,6 @@ export default function Users() {
             </Link>
             <IoSparklesSharp className="absolute right-[-16px] top-[-12px] fill-amber-400 text-3xl" />
           </div>
-          {/* )} */}
         </div>
         <div className="w-full flex flex-col md:flex-row gap-5">
           <div className="w-full bg-primary rounded-lg 2xl:hidden flex flex-col justify-start items-center gap-6 p-10 text-center relative">

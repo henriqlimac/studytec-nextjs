@@ -63,7 +63,7 @@ export default function Navbar({ currentUser }: NavbarProps) {
             ))}
           </div>
           <div className="w-full flex flex-col gap-4">
-            {currentUser.isPremium ? (
+            {currentUser?.isPremium ? (
               ""
             ) : (
               <Link
