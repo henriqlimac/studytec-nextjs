@@ -45,7 +45,7 @@ export default function ThemeSwitcher() {
       "Esquema de cores que trará ao site um ar diurno, onde recomendamos que utilize em locais mais claros, se for o caso.",
     dark: "Esquema de cores que trará ao site um ar noturno, onde recomendamos que utilize em locais mais escuros, se for o caso.",
     highconstrast:
-      "Esquema de cores que trará ao site um grande contraste de cores, onde recomendamos que utilize em casos de dificuldade em enxergar diferença entre as cores.",
+      "Esquema de cores que trará ao site um grande contraste de cores, recomendamos que utilize em casos de dificuldade em enxergar diferença entre as cores.",
   };
 
   const labelsMap: any = {

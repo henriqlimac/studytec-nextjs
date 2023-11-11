@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { Divider, Input } from "@nextui-org/react";
-import ThemeSwitcher from "./themeSwitcher";
+import ThemeSwitcher from "./ThemeSwitcher";
 import Image from "next/image";
 import { CldUploadButton } from "next-cloudinary";
 import { useState } from "react";
