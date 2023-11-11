@@ -1,6 +1,7 @@
 "use client"
 
 import { Button } from "@nextui-org/react";
+import { User } from "@prisma/client";
 import { AiFillCheckCircle, AiFillCloseCircle } from "react-icons/ai";
 import { IoSparklesSharp } from "react-icons/io5";
 
@@ -14,6 +15,7 @@ interface PlanCardProps {
   function3?: boolean;
   function4?: boolean;
   disabled?: boolean;
+  currentUser: User
 }
 
 export default function PlanCard({
@@ -25,10 +27,9 @@ export default function PlanCard({
   function2,
   function3,
   function4,
-  disabled
+  disabled,
+  currentUser
 }: PlanCardProps) {
-
-
   return (
     <div className="bg-primary w-full max-w-[300px] h-[500px] flex flex-col gap-6 p-8 text-center rounded-lg flex-grow relative">
       <div className="flex flex-col gap-4 h-full">

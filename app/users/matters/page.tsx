@@ -52,6 +52,7 @@ export default function Matters() {
               matter={matter.matter}
               color={matter.color}
               button={matter.button}
+              link={String(matter.id)}
             />
           ))}
         </div>
