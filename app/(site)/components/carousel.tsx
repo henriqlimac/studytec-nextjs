@@ -6,7 +6,8 @@ const collabProps = [
     name: "Henrique Lima",
     at: "@henriqlimac",
     tags: 1,
-    description: "Estudante da ETEC Maria Cristina Medeiros, 'Fullstack Web Developer' e principal desenvolvedor da plataforma StudyTec",
+    description:
+      "Estudante da ETEC Maria Cristina Medeiros, 'Fullstack Web Developer' e principal desenvolvedor da plataforma StudyTec",
     networks: 1,
   },
   {
@@ -48,9 +49,11 @@ export default function Carousel() {
     <div className="flex gap-5 w-full justify-start 3xl:justify-center items-center overflow-x-scroll snap-x scrollbar-hide">
       <div className="flex basis-[min(100%, 350px)] gap-5 box-content mr-[15px] ml-[15px] w-[min(100%, 350px)]">
         {collabProps.map((props) => (
-          <div className="flex flex-grow-1 items-center min-h-[500px]">
+          <div
+            className="flex flex-grow-1 items-center min-h-[500px]"
+            key={props.id}
+          >
             <CollabCard
-              key={props.id}
               name={props.name}
               tags={props.tags}
               at={props.at}

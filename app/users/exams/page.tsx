@@ -79,11 +79,9 @@ export default function Exams() {
   return (
     <div className="p-10 pt-16 w-full min-h-screen flex flex-col items-center justify-center gap-10">
       <div className="w-full max-w-[800px] flex flex-col justify-center items-center text-center xl:items-start xl:text-left gap-2">
-        <h1 className="text-2xl font-semibold">
-          Provas e Gabaritos (ETEC)
-        </h1>
+        <h1 className="text-2xl font-semibold">Provas e Gabaritos (ETEC)</h1>
         <p>
-          Ao clicar nos botões "Ver prova" e "Ver gabarito" você será
+          Ao clicar nos botões &quot;Ver prova&quot; e &quot;Ver gabarito&quot; você será
           redirecionado a uma outra página.
         </p>
       </div>

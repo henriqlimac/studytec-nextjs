@@ -42,7 +42,7 @@ export default function CardComponent({
           <div className="flex flex-col md:flex-row gap-3">
             <p className="text-sm">
               Clique no botão para ver os 2 vídeos semanais de {matter} esta
-              semana. Falaremos sobre os assuntos "{i1}" e "{i2}".
+              semana. Falaremos sobre os assuntos &quot;{i1}&quot; e &quot;{i2}&quot;.
             </p>
             <Button className={`${success ? "bg-success" : button} text-white`} onClick={() => onOpen()}>
               VER MAIS

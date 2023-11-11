@@ -7,12 +7,7 @@ import "../themes/animations.css";
 import Banner from "./components/banner";
 import Progress from "./components/progress";
 import { useState, useEffect } from "react";
-import { User } from "@prisma/client";
 import { BsCheck } from "react-icons/bs";
-
-interface LandingProps {
-  currentUser: User;
-}
 
 const ExercisesList = [
   {
@@ -41,7 +36,7 @@ const ExercisesList = [
   },
 ];
 
-export default function Users({ currentUser }: LandingProps) {
+export default function Users() {
   const [isFinished, setIsFinished] = useState(false);
 
   const progress = 11;
@@ -101,8 +96,11 @@ export default function Users({ currentUser }: LandingProps) {
             </h3>
             <ul className="w-full h-full flex flex-col items-start gap-5">
               {ExercisesList.map((matter) => (
-                <a className="text-typography justify-start bg-opacity-20 cursor-pointer w-full">
-                  <li key={matter.id} className="flex items-center gap-2">
+                <a
+                  className="text-typography justify-start bg-opacity-20 cursor-pointer w-full"
+                  key={matter.id}
+                >
+                  <li className="flex items-center gap-2">
                     <BsCheck className="bg-success rounded-full" /> Lista de
                     exercícios - {matter.matter}
                   </li>
@@ -117,7 +115,7 @@ export default function Users({ currentUser }: LandingProps) {
             <h2 className="text-2xl font-semibold">Ainda não é Premium?</h2>
             <p className="text-[0.90rem]">
               Na StudyTec proporcionamos planos diversos, dos quais vão do
-              "Básico" até o "Premium Plus". Está interessado? Clique no botão
+              &quot;Básico&quot; até o &quot;Premium Plus&quot;. Está interessado? Clique no botão
               abaixo para saber mais.
             </p>
             <Link
@@ -137,8 +135,11 @@ export default function Users({ currentUser }: LandingProps) {
             </h3>
             <ul className="w-full flex flex-col items-start gap-5">
               {ExercisesList.map((matter) => (
-                <a className="text-typography justify-start bg-opacity-20 cursor-pointer py-2 px-5 bg-secondary rounded-lg w-full select-none hover:text-typography/25">
-                  <li key={matter.id} className="flex items-center gap-2">
+                <a
+                  className="text-typography justify-start bg-opacity-20 cursor-pointer py-2 px-5 bg-secondary rounded-lg w-full select-none hover:text-typography/25"
+                  key={matter.id}
+                >
+                  <li className="flex items-center gap-2">
                     <BsCheck className="bg-success rounded-full" /> Lista de
                     exercícios - {matter.matter}
                   </li>

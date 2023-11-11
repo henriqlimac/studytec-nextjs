@@ -75,11 +75,7 @@ const CardElements = [
   },
 ];
 
-interface PlanProps {
-  success: boolean;
-}
-
-export default function Plan({ success }: PlanProps) {
+export default function Plan() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [cardElement, setCardElement] = useState<any>(null);
 
