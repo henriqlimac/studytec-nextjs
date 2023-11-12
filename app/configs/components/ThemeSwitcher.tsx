@@ -26,12 +26,14 @@ enum Theme {
 }
 
 export default function ThemeSwitcher() {
-  const [selectedOption, setSelectedOption]: any = useState(new Set([localStorage.getItem(themeStorageKey) || "light"]));
-
-  const [theme, setTheme] = useState<string>(localStorage.getItem(themeStorageKey) || Theme.light);
+  const [selectedOption, setSelectedOption] = useState<Theme>(Theme.light);
+  const [theme, setTheme] = useState<Theme>(Theme.light);
 
   useEffect(() => {
-    setTheme(localStorage.getItem(themeStorageKey) ?? Theme.light);
+    const selectedTheme: Theme =
+      (localStorage.getItem(themeStorageKey) as Theme) ?? Theme.light;
+    setTheme(selectedTheme ?? Theme.light);
+    setSelectedOption(selectedTheme ?? Theme.light);
   }, []);
 
   useEffect(() => {
@@ -78,7 +80,7 @@ export default function ThemeSwitcher() {
           aria-label="Merge options"
           selectedKeys={selectedOption}
           selectionMode="single"
-          onSelectionChange={setSelectedOption}
+          onSelectionChange={(value) => setSelectedOption(value as Theme)}
           className="max-w-[300px]"
         >
           <DropdownItem
