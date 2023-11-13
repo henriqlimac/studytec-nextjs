@@ -33,3 +33,24 @@ export async function POST(
         return new NextResponse('Internal Error', { status: 500 })
     }
 }
+
+export async function DELETE() {
+    try {
+        const currentUser = await getCurrentUser()
+
+        if(!currentUser?.id) {
+            return new NextResponse('Unauthorized', { status: 401 })
+        }
+
+        const deletedUser = await prisma.user.delete({
+            where: {
+                id: currentUser.id
+            }
+        })
+
+        return NextResponse.json(deletedUser)
+    } catch (error: any) {
+        console.log(error, 'ERROR_SETTINGS');
+        return new NextResponse('Internal Error', { status: 500 })
+    }
+}

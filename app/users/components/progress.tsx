@@ -16,7 +16,7 @@ export default function Progress({
       <CircularProgress
         label={label}
         classNames={{
-          svg: "w-52 h-36 drop-shadow-md",
+          svg: "w-52 h-36",
           indicator: "stroke-blue",
           track: "stroke-blue/10",
           value: "text-3xl font-semibold text-typography",

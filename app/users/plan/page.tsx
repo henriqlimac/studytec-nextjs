@@ -5,9 +5,6 @@ import CardComponent from "./components/card";
 import PlanModal from "./components/modal";
 
 import { useDisclosure } from "@nextui-org/react";
-import Image from "next/image";
-
-import miniature from "@/public/imgs/girl-sitting.svg";
 
 const CardElements = [
   {
