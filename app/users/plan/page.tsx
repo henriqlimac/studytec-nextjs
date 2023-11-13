@@ -5,6 +5,9 @@ import CardComponent from "./components/card";
 import PlanModal from "./components/modal";
 
 import { useDisclosure } from "@nextui-org/react";
+import Image from "next/image";
+
+import miniature from "@/public/imgs/girl-sitting.svg";
 
 const CardElements = [
   {
@@ -16,7 +19,7 @@ const CardElements = [
     i2: "Equação",
     color: "text-amber-400",
     button: "bg-amber-400",
-    success: false
+    success: false,
   },
   {
     id: 2,
@@ -27,7 +30,7 @@ const CardElements = [
     i2: "Expressões",
     color: "text-sky-500",
     button: "bg-sky-500",
-    success: false
+    success: false,
   },
   {
     id: 3,
@@ -38,7 +41,7 @@ const CardElements = [
     i2: "MRUV",
     color: "text-red-500",
     button: "bg-red-500",
-    success: false
+    success: false,
   },
   {
     id: 4,
@@ -49,7 +52,7 @@ const CardElements = [
     i2: "Formação de Espaços Geográficos",
     color: "text-orange-400",
     button: "bg-orange-400",
-    success: false
+    success: false,
   },
   {
     id: 5,
@@ -60,7 +63,7 @@ const CardElements = [
     i2: "DNA",
     color: "text-green-400",
     button: "bg-green-400",
-    success: false
+    success: false,
   },
   {
     id: 6,
@@ -71,7 +74,7 @@ const CardElements = [
     i2: "Revolução Industrial",
     color: "text-purple-400",
     button: "bg-purple-400",
-    success: false
+    success: false,
   },
 ];
 
@@ -85,7 +88,7 @@ export default function Plan() {
   };
 
   return (
-    <div className="pt-16 p-4">
+    <div className="pt-16 p-4 relative">
       <div className="w-full flex flex-col items-center">
         {CardElements.map((props) => (
           <>

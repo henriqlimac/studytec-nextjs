@@ -26,14 +26,18 @@ enum Theme {
 }
 
 export default function ThemeSwitcher() {
-  const [selectedOption, setSelectedOption] = useState<Theme>(Theme.light);
-  const [theme, setTheme] = useState<Theme>(Theme.light);
+  const [storageTheme, setStorageTheme] = useState<Theme>()
+  const [theme, setTheme] = useState<Theme>(storageTheme || Theme.light);
+
+  useEffect(() => {
+    const localStorageTheme: any = localStorage.getItem("theme");
+    setStorageTheme(localStorageTheme)
+  }, [])
 
   useEffect(() => {
     const selectedTheme: Theme =
       (localStorage.getItem(themeStorageKey) as Theme) ?? Theme.light;
     setTheme(selectedTheme ?? Theme.light);
-    setSelectedOption(selectedTheme ?? Theme.light);
   }, []);
 
   useEffect(() => {
@@ -56,71 +60,68 @@ export default function ThemeSwitcher() {
     highconstrast: "Modo alto contraste",
   };
 
-  // Convert the Set to an Array and get the first value.
-  const selectedOptionValue: any = Array.from(selectedOption)[0];
-
   return (
-    <ButtonGroup variant="flat">
-      <Button className="text-typograpy">
-        {theme == Theme.light ? <BsSunFill /> : ""}{" "}
-        {theme == Theme.dark ? <BsMoonFill /> : ""}{" "}
-        {theme == Theme.highContrast ? <BsCircleHalf /> : ""}{" "}
-        <p className="hidden md:inline-block">
-          {labelsMap[selectedOptionValue]}
-        </p>
-      </Button>
-      <Dropdown placement="bottom-end" className="bg-primary text-typography">
-        <DropdownTrigger>
-          <Button isIconOnly>
-            <BsChevronDown />
+    <div>
+        <ButtonGroup variant="flat">
+          <Button className="text-typograpy">
+            {theme == Theme.light ? <BsSunFill /> : ""}{" "}
+            {theme == Theme.dark ? <BsMoonFill /> : ""}{" "}
+            {theme == Theme.highContrast ? <BsCircleHalf /> : ""}{" "}
           </Button>
-        </DropdownTrigger>
-        <DropdownMenu
-          disallowEmptySelection
-          aria-label="Merge options"
-          selectedKeys={selectedOption}
-          selectionMode="single"
-          onSelectionChange={(value) => setSelectedOption(value as Theme)}
-          className="max-w-[300px]"
-        >
-          <DropdownItem
-            key="light"
-            description={
-              <p className="hidden md:inline-block">
-                {descriptionsMap["light"]}
-              </p>
-            }
-            onClick={() => setTheme(Theme.light)}
-            startContent={<BsSunFill />}
+          <Dropdown
+            placement="bottom-end"
+            className="bg-primary text-typography"
           >
-            {labelsMap["light"]}
-          </DropdownItem>
-          <DropdownItem
-            key="highconstrast"
-            description={
-              <p className="hidden md:inline-block">
-                {descriptionsMap["highconstrast"]}
-              </p>
-            }
-            onClick={() => setTheme(Theme.highContrast)}
-            startContent={<BsCircleHalf />}
-          >
-            {labelsMap["highconstrast"]}
-          </DropdownItem>
-          <DropdownItem
-            key="dark"
-            description={
-              <p className="hidden md:inline-block">
-                {descriptionsMap["dark"]}
-              </p>
-            }
-            onClick={() => setTheme(Theme.dark)}
-            startContent={<BsMoonFill />}
-          >
-            {labelsMap["dark"]}
-          </DropdownItem>
-        </DropdownMenu>
-      </Dropdown>
-    </ButtonGroup>
+            <DropdownTrigger>
+              <Button isIconOnly>
+                <BsChevronDown />
+              </Button>
+            </DropdownTrigger>
+            <DropdownMenu
+              disallowEmptySelection
+              selectedKeys={storageTheme}
+              selectionMode="single"
+              className="max-w-[300px]"
+            >
+              <DropdownItem
+                key="light"
+                description={
+                  <p className="hidden md:inline-block">
+                    {descriptionsMap["light"]}
+                  </p>
+                }
+                onClick={() => setTheme(Theme.light)}
+                startContent={<BsSunFill />}
+              >
+                {labelsMap["light"]}
+              </DropdownItem>
+              <DropdownItem
+                key="highconstrast"
+                description={
+                  <p className="hidden md:inline-block">
+                    {descriptionsMap["highconstrast"]}
+                  </p>
+                }
+                onClick={() => setTheme(Theme.highContrast)}
+                startContent={<BsCircleHalf />}
+              >
+                {labelsMap["highconstrast"]}
+              </DropdownItem>
+              <DropdownItem
+                key="dark"
+                description={
+                  <p className="hidden md:inline-block">
+                    {descriptionsMap["dark"]}
+                  </p>
+                }
+                onClick={() => setTheme(Theme.dark)}
+                startContent={<BsMoonFill />}
+              >
+                {labelsMap["dark"]}
+              </DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
+        </ButtonGroup>
+    </div>
   );
 }

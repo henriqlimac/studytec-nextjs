@@ -23,7 +23,7 @@ export default function AboutPlansPage() {
       <PlanCard
       color="text-danger fill-danger"
         title="PREMIUM+"
-        description="O plano 'PREMIUM+' dará acesso aos vídeos sem anúncios e um plano psicólogo online, para aqueles que desejam estudar e manter a saúde mental em dia."
+        description="O plano 'PREMIUM+' dará acesso aos vídeos sem anúncios e um plano psicólogo online, para aqueles que desejam ter autocuidado."
         price={"R$59,90/m"}
         function1={true}
         function2={true}

@@ -1,10 +1,8 @@
 html[data-theme="dark"] {
-  --color-primary: theme("colors.slate.950");
-  --color-secondary: theme("colors.slate.900");
-  --color-typography: theme("colors.slate.50");
-  --color-description: theme("colors.slate.100");
-  --color-border: rgba(0, 0, 0 ,0);
+  --color-primary: theme("colors.gray.900");
+  --color-secondary: theme("colors.gray.950");
+  --color-typography: theme("colors.gray.50");
+  --color-description: theme("colors.gray.100");
+  --color-border: theme("colors.gray.800");
   --shadow: rgba(0, 0, 0, 0.050)
-  --linv: hidden;
-  --lvis: inline-block;
 }

@@ -1,6 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import MattersCard from "./components/card";
+
+import miniature from "@/public/imgs/boy-running.svg"
 
 const CardElements = [
   {
@@ -43,9 +46,9 @@ const CardElements = [
 
 export default function Matters() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen pt-20 px-5 gap-10">
+    <div className="flex flex-col items-center justify-center w-full min-h-screen pt-20 px-5 gap-10 relative">
       <div className="flex items-center justify-center">
-        <div className="flex flex-wrap items-center justify-center gap-6">
+        <div className="flex flex-wrap items-center justify-center gap-6 z-10">
           {CardElements.map((matter) => (
             <MattersCard
               key={matter.id}
@@ -57,6 +60,13 @@ export default function Matters() {
           ))}
         </div>
       </div>
+      <Image 
+        height={500}
+        width={500}
+        alt=""
+        src={miniature}
+        className="fixed right-0 bottom-[-25px] opacity-25"
+      />
     </div>
   );
 }

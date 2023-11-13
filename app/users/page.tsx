@@ -1,13 +1,14 @@
 "use client";
 
-import { IoSparklesSharp } from "react-icons/io5";
 import Link from "next/link";
 import { Button } from "@nextui-org/react";
-import "../themes/animations.css";
 import Banner from "./components/banner";
 import Progress from "./components/progress";
 import { useState, useEffect } from "react";
-import { BsCheck } from "react-icons/bs";
+
+import { BsCheck, BsPlus } from "react-icons/bs";
+import { MdWorkspacePremium } from "react-icons/md"
+import { LuSparkles } from "react-icons/lu";
 
 const ExercisesList = [
   {
@@ -56,20 +57,22 @@ export default function Users() {
     <div>
       <Banner>
         <h1 className="text-3xl font-bold text-white">BEM-VINDO!</h1>
-        <p className="text-base opacity-70 text-white tracking-wide max-w-[650px]">
+        <p className="text-base opacity-70 text-white tracking-wide">
           O seu perfil foi criado! Agora você pode começar a estudar em nossa
           plataforma. Nesta página você poderá analisar seu desempenho semanal.
         </p>
         <Button
-          className="w-full md:w-[250px] bg-primary z-10"
+          className="w-full md:w-[250px] bg-primary z-10 font-bold"
           href="#beginning"
+          radius="full"
         >
+          <BsPlus className="w-6 h-6"/>
           VER MAIS
         </Button>
       </Banner>
       <section className="w-full flex flex-col gap-5 p-6" id="beginning">
         <div className="w-full flex flex-col lg:flex-row gap-5">
-          <div className="bg-primary rounded-lg p-4 w-full flex flex-col items-center justify-center">
+          <div className="bg-primary rounded-lg p-4 w-full flex flex-col items-center justify-center border-border border-1">
             <h1 className="font-semibold text-2xl text-center">
               Progresso Geral
             </h1>
@@ -90,7 +93,7 @@ export default function Users() {
               </div>
             </div>
           </div>
-          <div className="w-full bg-primary rounded-lg hidden 2xl:flex flex-col justify-start items-center gap-6 p-10 text-center relative">
+          <div className="w-full bg-primary rounded-lg hidden 2xl:flex flex-col justify-start items-center gap-6 p-10 text-center relative border-border border-1">
             <h3 className="text-lg font-semibold">
               Exercícios relacionados (semanal)
             </h3>
@@ -108,7 +111,7 @@ export default function Users() {
               ))}
             </ul>
           </div>
-          <div className="w-full lg:max-w-[400px] bg-primary rounded-lg flex flex-col justify-center items-center gap-6 p-10 text-center relative">
+          <div className="w-full lg:max-w-[400px] bg-primary rounded-lg flex flex-col justify-center items-center gap-6 p-10 text-center relative border-border border-1">
             <h2 className="text-2xl font-semibold">Ainda não é Premium?</h2>
             <p className="text-[0.90rem]">
               Na StudyTec proporcionamos planos diversos, dos quais vão do
@@ -117,22 +120,23 @@ export default function Users() {
             </p>
             <Link
               href="/users/premium-plans"
-              className="w-full bg-success text-sm font-semibold flex justify-center items-center py-2 rounded-xl hover:bg-success-500 transition"
+              className="w-full bg-success text-sm text-white font-semibold flex justify-center items-center py-2 rounded-xl hover:bg-success-600 transition gap-2"
             >
+              <MdWorkspacePremium className="h-5 w-5"/>
               QUERO SER PREMIUM!
             </Link>
-            <IoSparklesSharp className="absolute right-[-16px] top-[-12px] fill-amber-400 text-3xl" />
+            <LuSparkles className="absolute right-[-16px] top-[-12px] text-3xl text-amber-400 fill-amber-400" />
           </div>
         </div>
         <div className="w-full flex flex-col md:flex-row gap-5">
-          <div className="w-full bg-primary rounded-lg 2xl:hidden flex flex-col justify-start items-center gap-6 p-10 text-center relative">
+          <div className="w-full bg-primary rounded-lg 2xl:hidden flex flex-col justify-start items-center gap-6 p-10 text-center relative border-border border-1">
             <h3 className="text-lg font-semibold">
               Exercícios relacionados (semanal)
             </h3>
             <ul className="w-full flex flex-col items-start gap-5">
               {ExercisesList.map((matter) => (
                 <a
-                  className="text-typography justify-start bg-opacity-20 cursor-pointer py-2 px-5 bg-secondary rounded-lg w-full select-none hover:text-typography/25"
+                  className="text-typography justify-start bg-opacity-20 cursor-pointer py-2 px-5 bg-secondary rounded-lg w-full select-none hover:text-typography/25 border-border border-1"
                   key={matter.id}
                 >
                   <li className="flex items-center gap-2">
@@ -143,7 +147,7 @@ export default function Users() {
               ))}
             </ul>
           </div>
-          <div className="w-full bg-primary rounded-lg flex flex-col justify-start items-center gap-6 p-10 text-center relative">
+          <div className="w-full bg-primary rounded-lg flex flex-col justify-start items-center gap-6 p-10 text-center relative border-border border-1">
             <h3 className="text-lg font-semibold">
               Redações relacionadas (semanal)
             </h3>

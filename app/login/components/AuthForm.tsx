@@ -26,13 +26,21 @@ export default function AuthForm() {
   const [variant, setVariant] = useState<Variant>("LOGIN");
   const [isVisible, setIsVisible] = useState(false);
   const [value, setValue] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    toast.loading("Carregando...")
     if (session?.status == "authenticated") {
       router.push("/users");
+      setIsLoading(true)
+      toast.dismiss();
+      toast.success("Bem-vindo (insira o nome da pessoa)!")
     }
-  }, [session?.status, router]);
+    if (session?.status !== "authenticated") {
+      setIsLoading(false)
+      toast.dismiss();
+    }
+  }, [session?.status, router, isLoading]);
 
   const validateEmail = (value: any) =>
     value.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i);
@@ -87,7 +95,6 @@ export default function AuthForm() {
           }
 
           if (callback?.ok && !callback?.error) {
-            toast.success("Logado com sucesso!");
             router.push("/users");
           }
         })
@@ -102,10 +109,7 @@ export default function AuthForm() {
       .then((callback) => {
         if (callback?.error) {
           toast.error("Credenciais inválidas");
-        }
-
-        if (callback?.ok && !callback?.error) {
-          toast.success("Logado com sucesso!");
+          toast.loading("Voltando ao StudyTec...")
         }
       })
       .finally(() => setIsLoading(false));

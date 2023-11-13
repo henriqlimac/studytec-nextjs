@@ -31,15 +31,16 @@ export default function NavItem({
                 rounded-md
                 p-3
                 leading-6
-                hover:bg-slate-900
+                hover:bg-secondary
+                text-typography
+                transition
+                border-border
             `,
-          active && "bg-slate-900 font-medium"
+          active && "bg-secondary font-medium border-border border-1"
         )}
       >
         <Icon
-          className="
-                h-6 w-6 shrink-0
-            "
+          className={clsx(`h-6 w-6 shrin-0`, active && "fill-blue")}
         />
         <span className="text-sm">{label}</span>
       </Link>

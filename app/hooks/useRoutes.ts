@@ -2,12 +2,13 @@ import { useMemo } from "react";
 import { usePathname } from "next/navigation";
 
 import {
-  BiSolidHome,
-  BiSolidBook,
-  BiSolidZap,
-  BiSolidBrain,
-  BiSolidPhone,
-} from "react-icons/bi";
+  FaHome,
+  FaThLarge,
+  FaListAlt,
+  FaPenFancy,
+  FaHeadset,
+} from "react-icons/fa";
+import { MdWorkspacePremium } from "react-icons/md"
 
 const useRoutes = () => {
   const pathname = usePathname();
@@ -17,31 +18,37 @@ const useRoutes = () => {
       {
         label: "Página Inicial",
         href: "/users",
-        icon: BiSolidHome,
+        icon: FaHome,
         active: pathname == "/users",
       },
       {
         label: "Matérias",
         href: "/users/matters",
-        icon: BiSolidBook,
+        icon: FaThLarge,
         active: pathname == "/users/matters",
       },
       {
-        label: "Plano",
+        label: "Estudos",
         href: "/users/plan",
-        icon: BiSolidZap,
+        icon: FaListAlt,
         active: pathname == "/users/plan",
       },
       {
         label: "Provas",
         href: "/users/exams",
-        icon: BiSolidBrain,
+        icon: FaPenFancy,
         active: pathname == "/users/exams",
+      },
+      {
+        label: "Planos",
+        href: "/users/premium-plans",
+        icon: MdWorkspacePremium,
+        active: pathname == "/users/premium-plans",
       },
       {
         label: "Suporte",
         href: "/users/support",
-        icon: BiSolidPhone,
+        icon: FaHeadset,
         active: pathname == "/users/support",
       },
     ],

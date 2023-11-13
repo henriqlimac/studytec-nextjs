@@ -1,35 +1,24 @@
 import Image from "next/image";
-import "../../themes/animations.css";
 
-import miniature from "@/public/imgs/miniature.svg"
+import miniature from "@/public/imgs/girl-studying.svg"
 
 export default function Banner({ children }: { children: React.ReactNode }) {
   return (
-    <div className="w-full max-w-full banner">
-      <div className="w-full h-full max-h-[600px] bg-primary area">
-        <div className="circles xl:pl-[220px] pt-16 max-h-[600px] flex items-center">
+    <div className="w-full max-w-full px-5 pt-20 rounded-xl overflow-hidden">
+      <div className="w-full bg-blue saturate-[1.3] h-[425px] flex flex-col justify-center rounded-xl overflow-hidden lg:overflow-visible">
+        <div className="flex items-center justify-center">
           <div className="w-full text-center md:text-left px-20 flex flex-row gap-10 items-center justify-between">
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col justify-center gap-4 relative z-50 max-w-[500px]">
               {children}
             </div>
             <Image
-              width={400}
-              height={400}
+              width={450}
+              height={450}
               alt="Imagem do banner"
               src={miniature}
-              className="hidden lg:inline-block z-10"
+              className="opacity-10 right-0 inline-block lg:opacity-100 z-10 absolute lg:right-[5%] xl:right-[10%] bottom-[-20px]"
             />
           </div>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
         </div>
       </div>
     </div>

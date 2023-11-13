@@ -5,6 +5,4 @@ html[data-theme="highContrast"] {
   --color-description: theme("colors.black");
   --color-border: theme("colors.sky.700");
   --shadow: rgba(0, 0, 0, 0);
-  --linv: "inline-block";
-  --lvis: "hidden";
 }

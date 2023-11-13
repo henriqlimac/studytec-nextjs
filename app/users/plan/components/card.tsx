@@ -23,7 +23,7 @@ export default function CardComponent({
   success,
 }: CardProps) {
   return (
-      <Card className="w-full max-w-[800px] m-4 border-border border-1 shadow-shadow shadow-lg">
+      <Card className="w-full max-w-[800px] m-4 border-border border-1 shadow-none">
         <CardHeader className={`${color} bg-primary ${success ? "bg-success" : ""}`}>
           <h1 className={`font-medium ${success ? "text-white" : color} uppercase`}>{matter}</h1>
         </CardHeader>
