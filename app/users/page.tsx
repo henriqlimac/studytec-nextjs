@@ -1,14 +1,14 @@
 "use client";
 
-import Link from "next/link";
 import { Button } from "@nextui-org/react";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 import Banner from "./components/banner";
 import Progress from "./components/progress";
-import { useState, useEffect } from "react";
 
 import { BsCheck, BsPlus } from "react-icons/bs";
-import { MdWorkspacePremium } from "react-icons/md"
 import { LuSparkles } from "react-icons/lu";
+import { MdWorkspacePremium } from "react-icons/md";
 
 const ExercisesList = [
   {
@@ -39,7 +39,6 @@ const ExercisesList = [
 
 export default function Users() {
   const [isFinished, setIsFinished] = useState(false);
-
   const progress = 11;
 
   const weeklyPercentageProgress = progress * 8.3;
@@ -66,7 +65,7 @@ export default function Users() {
           href="#beginning"
           radius="full"
         >
-          <BsPlus className="w-6 h-6"/>
+          <BsPlus className="w-6 h-6" />
           VER MAIS
         </Button>
       </Banner>
@@ -115,14 +114,14 @@ export default function Users() {
             <h2 className="text-2xl font-semibold">Ainda não é Premium?</h2>
             <p className="text-[0.90rem]">
               Na StudyTec proporcionamos planos diversos, dos quais vão do
-              &quot;Básico&quot; até o &quot;Premium Plus&quot;. Está interessado? Clique no botão
-              abaixo para saber mais.
+              &quot;Básico&quot; até o &quot;Premium Plus&quot;. Está
+              interessado? Clique no botão abaixo para saber mais.
             </p>
             <Link
               href="/users/premium-plans"
               className="w-full bg-success text-sm text-white font-semibold flex justify-center items-center py-2 rounded-xl hover:bg-success-600 transition gap-2"
             >
-              <MdWorkspacePremium className="h-5 w-5"/>
+              <MdWorkspacePremium className="h-5 w-5" />
               QUERO SER PREMIUM!
             </Link>
             <LuSparkles className="absolute right-[-16px] top-[-12px] text-3xl text-amber-400 fill-amber-400" />

@@ -24,9 +24,6 @@ const config: Config = {
       screens: {
         '3xl': '1850px'
       },
-      backgroundImage: {
-        'banner': '@/public/imgs/banner.png'
-      },
       display: {
         linv: "var(--linv)",
         lvis: "var(--lvis)",

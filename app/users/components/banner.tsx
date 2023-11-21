@@ -12,11 +12,11 @@ export default function Banner({ children }: { children: React.ReactNode }) {
               {children}
             </div>
             <Image
-              width={450}
-              height={450}
+              width={490}
+              height={490}
               alt="Imagem do banner"
               src={miniature}
-              className="opacity-10 right-0 inline-block lg:opacity-100 z-10 absolute lg:right-[5%] xl:right-[10%] bottom-[-20px]"
+              className="opacity-10 right-0 inline-block lg:opacity-100 z-10 absolute lg:right-[5%] xl:right-[10%] bottom-[-25px]"
             />
           </div>
         </div>

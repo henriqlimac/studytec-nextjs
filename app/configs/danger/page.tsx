@@ -4,12 +4,13 @@ import { useRouter } from "next/navigation";
 import { Button } from "@nextui-org/react";
 import clsx from "clsx";
 import axios from "axios";
-import { signOut } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
 import toast from "react-hot-toast";
 import { useState } from "react";
 
 export default function Dangerzone() {
   const router = useRouter();
+  const session = useSession()
   const [disabled, isDisabled] = useState(true);
 
   function enableButton() {

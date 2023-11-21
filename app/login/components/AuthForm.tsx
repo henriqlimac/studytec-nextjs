@@ -29,15 +29,15 @@ export default function AuthForm() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    toast.loading("Carregando...")
+    toast.loading("Carregando...");
     if (session?.status == "authenticated") {
       router.push("/users");
-      setIsLoading(true)
+      setIsLoading(true);
       toast.dismiss();
-      toast.success("Bem-vindo (insira o nome da pessoa)!")
+      toast.success(`Bem-vindo, ${session.data.user?.name}!`);
     }
     if (session?.status !== "authenticated") {
-      setIsLoading(false)
+      setIsLoading(false);
       toast.dismiss();
     }
   }, [session?.status, router, isLoading]);
@@ -109,7 +109,7 @@ export default function AuthForm() {
       .then((callback) => {
         if (callback?.error) {
           toast.error("Credenciais inválidas");
-          toast.loading("Voltando ao StudyTec...")
+          toast.loading("Voltando ao StudyTec...");
         }
       })
       .finally(() => setIsLoading(false));

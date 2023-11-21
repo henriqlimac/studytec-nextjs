@@ -61,8 +61,8 @@ export default function Matters() {
         </div>
       </div>
       <Image 
-        height={500}
-        width={500}
+        height={700}
+        width={700}
         alt=""
         src={miniature}
         className="fixed right-0 bottom-[-25px] opacity-25"

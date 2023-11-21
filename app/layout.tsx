@@ -24,12 +24,12 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={poppins.className}>
-          <AuthContext>
-            <NextContext>
-              <ToasterContext />
-              {children}
-            </NextContext>
-          </AuthContext>
+        <AuthContext>
+          <NextContext>
+            <ToasterContext />
+            {children}
+          </NextContext>
+        </AuthContext>
       </body>
     </html>
   );
