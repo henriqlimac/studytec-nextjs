@@ -65,7 +65,7 @@ export default function Matters() {
         width={700}
         alt=""
         src={miniature}
-        className="fixed right-0 bottom-[-25px] opacity-25"
+        className="fixed right-0 bottom-[-25px] opacity-25 select-none"
       />
     </div>
   );

@@ -155,7 +155,33 @@ export default function Users() {
               <li>Assunto: Cyberbullying</li>
             </ul>
           </div>
+          <div className="hidden 2xl:flex w-full flex-col md:flex-row gap-5">
+            <div className="w-full bg-primary rounded-lg flex flex-col justify-center items-center gap-2 p-10 text-center relative border-border border-1">
+              <h2 className="text-lg font-semibold">
+                Tendo dúvidas em como utilizar o site? Acesse nosso suporte!
+              </h2>
+              <Link
+                href={"/users/support"}
+                className="text-blue cursor-pointer"
+              >
+                Clique aqui para acessar o suporte.
+              </Link>
+            </div>
+          </div>
         </div>
+        <div className="flex 2xl:hidden w-full flex-col md:flex-row gap-5">
+            <div className="w-full bg-primary rounded-lg flex flex-col justify-center items-center gap-2 p-10 text-center relative border-border border-1">
+              <h2 className="text-lg font-semibold">
+                Tendo dúvidas em como utilizar o site? Acesse nosso suporte!
+              </h2>
+              <Link
+                href={"/users/support"}
+                className="text-blue cursor-pointer"
+              >
+                Clique aqui para acessar o suporte.
+              </Link>
+            </div>
+          </div>
       </section>
     </div>
   );

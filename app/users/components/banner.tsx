@@ -16,7 +16,7 @@ export default function Banner({ children }: { children: React.ReactNode }) {
               height={490}
               alt="Imagem do banner"
               src={miniature}
-              className="opacity-10 right-0 inline-block lg:opacity-100 z-10 absolute lg:right-[5%] xl:right-[10%] bottom-[-25px]"
+              className="opacity-10 right-0 inline-block lg:opacity-100 z-10 absolute lg:right-[5%] xl:right-[10%] bottom-[-25px] select-none"
             />
           </div>
         </div>

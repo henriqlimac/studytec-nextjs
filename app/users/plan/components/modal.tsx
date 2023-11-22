@@ -36,7 +36,7 @@ export default function PlanModal({
       isOpen={isOpen}
       onOpenChange={onOpenChange}
       backdrop="blur"
-      className="bg-secondary"
+      className="bg-secondary border-border shadow-none"
     >
       <ModalContent>
         {(onClose) => (
