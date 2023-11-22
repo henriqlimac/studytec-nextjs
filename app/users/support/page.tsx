@@ -83,7 +83,7 @@ export default function Support() {
       </div>
       <div className="w-full flex flex-col items-center p-10 gap-10">
         <h1 className="text-2xl font-semibold">Perguntas Frequentes</h1>
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-10 flex-wrap">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-5 flex-wrap">
           {articleElements.map((props) => (
             <>
               <Article

@@ -15,7 +15,7 @@ const collabProps = [
     name: "Daniela Gaeta",
     at: "@danxvs_",
     tags: 3,
-    description: "albçaçbabablablablala",
+    description: "Estudante da ETEC Maria Cristina Medeiros",
     networks: 3,
   },
   {
@@ -23,7 +23,7 @@ const collabProps = [
     name: "Gustavo Reis",
     at: "@_reisgustavo",
     tags: 3,
-    description: "blablablablalbalba",
+    description: "Estudante da ETEC Maria Cristina Medeiros",
     networks: 3,
   },
   {
@@ -31,15 +31,15 @@ const collabProps = [
     name: "Camile Campos",
     at: "@camiille_campos",
     tags: 3,
-    description: "blablablablalbalba",
+    description: "Estudante da ETEC Maria Cristina Medeiros",
     networks: 3,
   },
   {
     id: 1,
     name: "Gustavo Damaso",
     at: "@damaasoo",
-    tags: 2,
-    description: "blablablablalbalba",
+    tags: 3,
+    description: "Estudante da ETEC Maria Cristina Medeiros",
     networks: 3,
   },
 ];

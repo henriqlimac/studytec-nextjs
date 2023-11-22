@@ -22,8 +22,8 @@ export default function Home() {
                 O estudo que{" "}
                 <strong className="font-semibold bg-blue bg-opacity-50 px-2 border-l rounded-l-lg border-r-3 border-r-blue relative">
                   você
-                  <div className="bg-blue py-1 px-2 absolute right-[-71px] top-[-23px] text-xs text-white hidden sm:block">
-                    Henrique
+                  <div className="bg-blue py-1 px-2 absolute right-[-66px] top-[-23px] text-xs text-white hidden sm:block">
+                    StudyTec
                   </div>
                 </strong>{" "}
                 <br /> merece.
