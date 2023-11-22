@@ -9,6 +9,7 @@ import Progress from "./components/progress";
 import { BsCheck, BsPlus } from "react-icons/bs";
 import { LuSparkles } from "react-icons/lu";
 import { MdWorkspacePremium } from "react-icons/md";
+import { IoBuild } from "react-icons/io5";
 
 const ExercisesList = [
   {
@@ -60,14 +61,15 @@ export default function Users() {
           O seu perfil foi criado! Agora você pode começar a estudar em nossa
           plataforma. Nesta página você poderá analisar seu desempenho semanal.
         </p>
-        <Button
-          className="w-full md:w-[250px] bg-primary z-10 font-bold"
-          href="#beginning"
-          radius="full"
-        >
-          <BsPlus className="w-6 h-6" />
-          VER MAIS
-        </Button>
+        <a href="#beginning">
+          <Button
+            className="w-full md:w-[250px] bg-primary z-10 font-bold"
+            radius="full"
+          >
+            <BsPlus className="w-6 h-6" />
+            VER MAIS
+          </Button>
+        </a>
       </Banner>
       <section className="w-full flex flex-col gap-5 p-6" id="beginning">
         <div className="w-full flex flex-col lg:flex-row gap-5">
@@ -155,33 +157,62 @@ export default function Users() {
               <li>Assunto: Cyberbullying</li>
             </ul>
           </div>
-          <div className="hidden 2xl:flex w-full flex-col md:flex-row gap-5">
-            <div className="w-full bg-primary rounded-lg flex flex-col justify-center items-center gap-2 p-10 text-center relative border-border border-1">
-              <h2 className="text-lg font-semibold">
-                Tendo dúvidas em como utilizar o site? Acesse nosso suporte!
-              </h2>
-              <Link
-                href={"/users/support"}
-                className="text-blue cursor-pointer"
-              >
-                Clique aqui para acessar o suporte.
-              </Link>
+          <div className="hidden 2xl:flex w-full flex-col md:flex-row gap-5 relative">
+            <div className="w-full bg-blue text-white rounded-lg flex justify-between items-center gap-2 p-10 relative border-border border-1">
+              <div>
+                <h2 className="text-xl font-semibold">
+                  Gosta da nossa plataforma ou acha que tem algo a melhorar?
+                </h2>
+                <p>Nos mande um feedback!</p>
+              </div>
+              <div>
+                <Link
+                  href={
+                    "https://mail.google.com/mail/u/0/#inbox?compose=DmwnWtMjKSKwxFgsMCwPWVtNjRMTHWRLkplJCBwJkQRvvmNGkzrncqPSzLhLvjFrLMtNvXxQHMVB"
+                  }
+                >
+                  <Button className="bg-success text-white font-semibold">
+                    ENVIAR FEEDBACK
+                  </Button>
+                </Link>
+              </div>
             </div>
+            <IoBuild className="absolute right-4 top-4 text-3xl text-white fill-white" />
           </div>
         </div>
-        <div className="flex 2xl:hidden w-full flex-col md:flex-row gap-5">
-            <div className="w-full bg-primary rounded-lg flex flex-col justify-center items-center gap-2 p-10 text-center relative border-border border-1">
-              <h2 className="text-lg font-semibold">
-                Tendo dúvidas em como utilizar o site? Acesse nosso suporte!
+        <div className="flex 2xl:hidden w-full flex-col md:flex-row gap-5 relative">
+          <div className="w-full bg-blue text-white rounded-lg flex justify-between items-center gap-2 p-10 relative border-border border-1">
+            <div>
+              <h2>
+                Gosta da nossa plataforma ou acha que tem algo a melhorar?
               </h2>
+              <p>Nos mande um feedback!</p>
+            </div>
+            <div>
+              {" "}
               <Link
-                href={"/users/support"}
-                className="text-blue cursor-pointer"
+                href={
+                  "https://mail.google.com/mail/u/0/#inbox?compose=DmwnWtMjKSKwxFgsMCwPWVtNjRMTHWRLkplJCBwJkQRvvmNGkzrncqPSzLhLvjFrLMtNvXxQHMVB"
+                }
               >
-                Clique aqui para acessar o suporte.
+                <Button className="bg-success text-white font-semibold">
+                  ENVIAR FEEDBACK
+                </Button>
               </Link>
             </div>
           </div>
+          <IoBuild className="absolute right-[-16px] top-[-12px] text-3xl text-white fill-white" />
+        </div>
+        <div className="flex w-full flex-col md:flex-row gap-5">
+          <div className="w-full bg-primary rounded-lg flex flex-col justify-center items-center p-10 relative border-border border-1">
+            <h2 className="text-lg font-semibold">
+              Tendo dúvidas em como utilizar o site? Acesse nosso suporte!
+            </h2>
+            <Link href={"/users/support"} className="text-blue cursor-pointer">
+              Clique aqui para acessar o suporte.
+            </Link>
+          </div>
+        </div>
       </section>
     </div>
   );

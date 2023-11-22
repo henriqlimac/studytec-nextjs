@@ -7,7 +7,7 @@ export default function Banner({ children }: { children: React.ReactNode }) {
     <div className="w-full max-w-full px-5 pt-20 rounded-xl overflow-hidden">
       <div className="w-full bg-blue saturate-[1.3] h-[425px] flex flex-col justify-center rounded-xl overflow-hidden lg:overflow-visible">
         <div className="flex items-center justify-center">
-          <div className="w-full text-center md:text-left px-20 flex flex-row gap-10 items-center justify-between">
+          <div className="w-full text-center md:text-left px-[5vw] flex flex-row gap-10 items-center justify-between">
             <div className="flex flex-col justify-center gap-4 relative z-50 max-w-[500px]">
               {children}
             </div>

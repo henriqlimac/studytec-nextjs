@@ -116,6 +116,7 @@ export default function Support() {
             <h2>Nos mande um email!</h2>
             <Link
               className="text-blue cursor-pointer text-xl"
+              href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWtMjKSKwxFgsMCwPWVtNjRMTHWRLkplJCBwJkQRvvmNGkzrncqPSzLhLvjFrLMtNvXxQHMVB"
             >
               studytec@gmail.com
             </Link>

@@ -4,15 +4,14 @@ import { User } from "@prisma/client";
 
 import useRoutes from "@/app/hooks/useRoutes";
 import { useEffect, useState } from "react";
-import Image from "next/image";
 
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 
-import logo from "@/public/logo.svg";
-import logodark from "@/public/logodark.svg"
-
 import NavItem from "./navitem";
 import UserActions from "./actions";
+
+import '../../themes/images.css'
+import Link from "next/link";
 
 interface NavbarProps {
   currentUser: User;
@@ -44,22 +43,7 @@ export default function Navbar({ currentUser }: NavbarProps) {
       >
         <ul className="h-full flex flex-col justify-between">
           <div className="flex justify-between xl:justify-center items-center">
-            <Image
-              src={logo}
-              alt="Logo"
-              width={175}
-              height={10}
-              loading="lazy"
-              className={`${theme == "light" || theme == "highContrast" ? "hidden" : "inline-block"}`}
-            />
-            <Image
-              src={logodark}
-              alt="Logo"
-              width={175}
-              height={10}
-              loading="lazy"
-              className={`${theme == "dark" ? "hidden" : "inline-block"}`}
-            />
+            <Link href={"/users"} className={`h-12 w-40 logo`}></Link>
             <button onClick={navOpen} className="xl:hidden text-primary">
               <BiChevronLeft className="w-6 h-6 text-typography" />
             </button>
@@ -76,9 +60,12 @@ export default function Navbar({ currentUser }: NavbarProps) {
               />
             ))}
           </div>
-          <div className="w-full flex flex-col gap-4">
+          <div className="w-full flex flex-col">
             <p className="text-center text-xs opacity-50 text-typography">
               &copy; 2023 StudyTec
+            </p>
+            <p className="text-center text-xs opacity-50 text-typography">
+              Artes feitas por <a href="https://pablostanley.gumroad.com/l/transhumans" className="text-blue" target="_blank">Pablo Stanley</a>
             </p>
           </div>
         </ul>

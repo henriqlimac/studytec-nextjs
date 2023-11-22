@@ -1,9 +1,12 @@
-"use client"
+"use client";
 
 import { Button } from "@nextui-org/react";
 import { AiFillCheckCircle, AiFillCloseCircle } from "react-icons/ai";
 import { IoSparklesSharp } from "react-icons/io5";
-
+import { useSession } from "next-auth/react";
+import { User } from "@prisma/client";
+import { useRouter } from "next/navigation";
+import axios from "axios";
 interface PlanCardProps {
   color: string;
   title: string;
@@ -14,6 +17,7 @@ interface PlanCardProps {
   function3?: boolean;
   function4?: boolean;
   disabled?: boolean;
+  currentUser?: User;
 }
 
 export default function PlanCard({
@@ -26,7 +30,10 @@ export default function PlanCard({
   function3,
   function4,
   disabled,
+  currentUser
 }: PlanCardProps) {
+  const router = useRouter()
+
   return (
     <div className="bg-primary w-full max-w-[300px] h-[500px] flex flex-col gap-6 p-8 text-center rounded-lg flex-grow relative shadow-none border-border border-1 animate-appearance-in">
       <div className="flex flex-col gap-4 h-full">
@@ -70,8 +77,21 @@ export default function PlanCard({
           Psicólogo online
         </li>
       </ul>
-      <Button fullWidth disabled={disabled} className={`h-full font-bold ${disabled ? "" : "bg-success text-white"}`}>{disabled ? "JÁ POSSUI!" : "COMEÇAR O MEU PLANO"}</Button>
-      <IoSparklesSharp className={`absolute right-[-16px] top-[-12px] ${color} text-3xl`} />
+      <Button
+        fullWidth
+        disabled={disabled}
+        className={`h-full font-bold ${
+          disabled ? "" : "bg-success text-white"
+        }`}
+        onClick={() => {
+          router.refresh()
+        }}
+      >
+        {disabled ? "JÁ POSSUI!" : "COMEÇAR O MEU PLANO"}
+      </Button>
+      <IoSparklesSharp
+        className={`absolute right-[-16px] top-[-12px] ${color} text-3xl`}
+      />
     </div>
   );
 }

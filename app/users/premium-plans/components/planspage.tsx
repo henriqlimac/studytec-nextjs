@@ -1,6 +1,11 @@
+import { User } from "@prisma/client";
 import PlanCard from "./plancard";
 
-export default function AboutPlansPage() {
+interface PlansPageProps {
+  currentUser: User;
+}
+
+export default function AboutPlansPage({ currentUser }: PlansPageProps) {
   return (
     <>
       <PlanCard
@@ -19,6 +24,7 @@ export default function AboutPlansPage() {
         function1={true}
         function2={true}
         function3={true}
+        currentUser={currentUser!}
       />
       <PlanCard
       color="text-danger fill-danger"
@@ -29,6 +35,7 @@ export default function AboutPlansPage() {
         function2={true}
         function3={true}
         function4={true}
+        currentUser={currentUser!}
       />
     </>
   );
