@@ -81,8 +81,8 @@ export default function Exams() {
       <div className="w-full max-w-[800px] flex flex-col justify-center items-center text-center xl:items-start xl:text-left gap-2">
         <h1 className="text-2xl font-semibold">Provas e Gabaritos (ETEC)</h1>
         <p>
-          Ao clicar nos botões &quot;Ver prova&quot; e &quot;Ver gabarito&quot; você será
-          redirecionado a uma outra página.
+          Ao clicar nos botões &quot;Ver prova&quot; e &quot;Ver gabarito&quot;
+          você será redirecionado a uma outra página.
         </p>
       </div>
       <div className="w-full flex flex-col gap-7 max-w-[800px]">

@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-const {nextui} = require("@nextui-org/react")
+const { nextui } = require("@nextui-org/react");
 
 const config: Config = {
   darkMode: "class",
@@ -13,25 +13,25 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: 'var(--color-primary)',
-        secondary: 'var(--color-secondary)',
-        typography: 'var(--color-typography)',
-        description: 'var(--color-description)',
-        border: 'var(--color-border)',
-        shadow: 'var(--shadow)',
-        'blue': '#5e8eec',
+        primary: "var(--color-primary)",
+        secondary: "var(--color-secondary)",
+        typography: "var(--color-typography)",
+        description: "var(--color-description)",
+        border: "var(--color-border)",
+        shadow: "var(--shadow)",
+        blue: "#5e8eec",
       },
       screens: {
-        '3xl': '1850px'
+        "3xl": "1850px",
       },
       display: {
         linv: "var(--linv)",
         lvis: "var(--lvis)",
-      }
+      },
     },
   },
   plugins: [
-    require('tailwind-scrollbar-hide'),
+    require("tailwind-scrollbar-hide"),
     require("@tailwindcss/forms")({
       strategy: "class",
     }),

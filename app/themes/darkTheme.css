@@ -4,5 +4,5 @@ html[data-theme="dark"] {
   --color-typography: theme("colors.gray.50");
   --color-description: theme("colors.gray.100");
   --color-border: theme("colors.gray.800");
-  --shadow: rgba(0, 0, 0, 0.050)
+  --shadow: rgba(0, 0, 0, 0.05);
 }

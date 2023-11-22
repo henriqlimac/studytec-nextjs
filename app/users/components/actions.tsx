@@ -11,11 +11,6 @@ import {
   AvatarIcon,
   Badge,
   Button,
-  Dropdown,
-  DropdownTrigger,
-  DropdownMenu,
-  DropdownSection,
-  DropdownItem,
   useDisclosure,
   Modal,
   ModalContent,
@@ -74,7 +69,11 @@ export default function UserActions({ currentUser }: NavbarProps) {
               setOpenDropdown(!openDropdown);
             }}
           >
-            <BiChevronDown className={`w-6 h-6 transition ${openDropdown ? "rotate-90" : ""}`} />
+            <BiChevronDown
+              className={`w-6 h-6 transition ${
+                openDropdown ? "rotate-90" : ""
+              }`}
+            />
           </button>
           <div
             className={`absolute right-4 top-12 ${

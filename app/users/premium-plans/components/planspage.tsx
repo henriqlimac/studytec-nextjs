@@ -17,7 +17,7 @@ export default function AboutPlansPage({ currentUser }: PlansPageProps) {
         disabled={true}
       />
       <PlanCard
-      color="text-amber-400 fill-amber-400"
+        color="text-amber-400 fill-amber-400"
         title="PREMIUM"
         description="O plano 'PREMIUM' lhe dará acesso aos vídeos sem anúncios, ou seja, feito para aqueles que desejam estudar sem interrupções."
         price={"R$9,90/m"}
@@ -27,7 +27,7 @@ export default function AboutPlansPage({ currentUser }: PlansPageProps) {
         currentUser={currentUser!}
       />
       <PlanCard
-      color="text-danger fill-danger"
+        color="text-danger fill-danger"
         title="PREMIUM+"
         description="O plano 'PREMIUM+' dará acesso aos vídeos sem anúncios e um plano psicólogo online, para aqueles que desejam ter autocuidado."
         price={"R$59,90/m"}

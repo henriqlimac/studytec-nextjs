@@ -14,7 +14,7 @@ export default function Article({ text, onOpen }: ArticleProps) {
     <Card className="w-full max-w-[400px] shadow-none border-border border-1 bg-primary">
       <CardBody className="h-[200px] flex flex-col items-center justify-center gap-5 px-10 text-center overflow-hidden">
         <div className="bg-black py-5 px-5 text-white rounded-xl flex items-center justify-center">
-            <h1 className="text-4xl font-thin">ST</h1>
+          <h1 className="text-4xl font-thin">ST</h1>
         </div>
         <p>{text}</p>
       </CardBody>

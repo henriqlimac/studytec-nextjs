@@ -3,7 +3,7 @@
 import Image from "next/image";
 import MattersCard from "./components/card";
 
-import miniature from "@/public/imgs/boy-running.svg"
+import miniature from "@/public/imgs/boy-running.svg";
 
 const CardElements = [
   {
@@ -60,7 +60,7 @@ export default function Matters() {
           ))}
         </div>
       </div>
-      <Image 
+      <Image
         height={700}
         width={700}
         alt=""

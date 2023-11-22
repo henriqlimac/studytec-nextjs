@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import miniature from "@/public/imgs/girl-studying.svg"
+import miniature from "@/public/imgs/girl-studying.svg";
 
 export default function Banner({ children }: { children: React.ReactNode }) {
   return (

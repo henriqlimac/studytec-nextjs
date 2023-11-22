@@ -30,9 +30,9 @@ export default function PlanCard({
   function3,
   function4,
   disabled,
-  currentUser
+  currentUser,
 }: PlanCardProps) {
-  const router = useRouter()
+  const router = useRouter();
 
   return (
     <div className="bg-primary w-full max-w-[300px] h-[500px] flex flex-col gap-6 p-8 text-center rounded-lg flex-grow relative shadow-none border-border border-1 animate-appearance-in">
@@ -84,7 +84,7 @@ export default function PlanCard({
           disabled ? "" : "bg-success text-white"
         }`}
         onClick={() => {
-          router.refresh()
+          router.refresh();
         }}
       >
         {disabled ? "JÁ POSSUI!" : "COMEÇAR O MEU PLANO"}

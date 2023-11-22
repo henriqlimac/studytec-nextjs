@@ -46,14 +46,20 @@ export default function PlanModal({
             </ModalHeader>
             <ModalBody className="flex flex-row text-center">
               <div className="w-full flex flex-col items-center gap-2">
-                <Link className={`${color} bg-primary p-7 rounded-lg`} href={link1}>
-                  <BsFillPlayFill className="w-10 h-10"/>
+                <Link
+                  className={`${color} bg-primary p-7 rounded-lg`}
+                  href={link1}
+                >
+                  <BsFillPlayFill className="w-10 h-10" />
                 </Link>
                 {i1}
               </div>
               <div className="w-full flex flex-col items-center gap-2">
-                <Link className={`${color} bg-primary p-7 rounded-lg`} href={link2}>
-                  <BsFillPlayFill className="w-10 h-10"/>
+                <Link
+                  className={`${color} bg-primary p-7 rounded-lg`}
+                  href={link2}
+                >
+                  <BsFillPlayFill className="w-10 h-10" />
                 </Link>
                 {i2}
               </div>

@@ -10,7 +10,7 @@ import { useState } from "react";
 
 export default function Dangerzone() {
   const router = useRouter();
-  const session = useSession()
+  const session = useSession();
   const [disabled, isDisabled] = useState(true);
 
   function enableButton() {

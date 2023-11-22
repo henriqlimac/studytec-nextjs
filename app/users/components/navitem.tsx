@@ -16,7 +16,7 @@ export default function NavItem({
   icon: Icon,
   href,
   active,
-  onClick
+  onClick,
 }: NavItemProps) {
   return (
     <li>
@@ -39,9 +39,7 @@ export default function NavItem({
           active && "bg-secondary font-medium border-border border-1"
         )}
       >
-        <Icon
-          className={clsx(`h-6 w-6 shrin-0`, active && "fill-blue")}
-        />
+        <Icon className={clsx(`h-6 w-6 shrin-0`, active && "fill-blue")} />
         <span className="text-sm">{label}</span>
       </Link>
     </li>

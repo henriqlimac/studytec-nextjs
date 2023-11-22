@@ -8,7 +8,7 @@ import {
   FaPenFancy,
   FaHeadset,
 } from "react-icons/fa";
-import { MdWorkspacePremium } from "react-icons/md"
+import { MdWorkspacePremium } from "react-icons/md";
 
 const useRoutes = () => {
   const pathname = usePathname();

@@ -1,24 +1,24 @@
 .bg-grid {
-    background-image: url('../../public/imgs/grid.svg');
+  background-image: url("../../public/imgs/grid.svg");
 }
 
-html[data-theme="light"]> body .logo {
-    background-image: url('../../public/logodark.svg');
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+html[data-theme="light"] > body .logo {
+  background-image: url("../../public/logodark.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-html[data-theme="highContrast"]> body .logo {
-    background-image: url('../../public/logodark.svg');
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+html[data-theme="highContrast"] > body .logo {
+  background-image: url("../../public/logodark.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-html[data-theme="dark"]> body .logo {
-    background-image: url('../../public/logo.svg');
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+html[data-theme="dark"] > body .logo {
+  background-image: url("../../public/logo.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }

@@ -10,7 +10,7 @@ import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import NavItem from "./navitem";
 import UserActions from "./actions";
 
-import '../../themes/images.css'
+import "../../themes/images.css";
 import Link from "next/link";
 
 interface NavbarProps {
@@ -21,12 +21,12 @@ export default function Navbar({ currentUser }: NavbarProps) {
   const routes = useRoutes();
 
   const [left, setLeft] = useState("left-[-100%]");
-  const [theme, getTheme]: any = useState()
+  const [theme, getTheme]: any = useState();
 
   useEffect(() => {
-    const storageTheme = localStorage.getItem("theme")
-    getTheme(storageTheme)
-  }, [theme])
+    const storageTheme = localStorage.getItem("theme");
+    getTheme(storageTheme);
+  }, [theme]);
 
   const navOpen = () => {
     if (left == "left-[-100%]") {
@@ -65,7 +65,14 @@ export default function Navbar({ currentUser }: NavbarProps) {
               &copy; 2023 StudyTec
             </p>
             <p className="text-center text-xs opacity-50 text-typography">
-              Artes feitas por <a href="https://pablostanley.gumroad.com/l/transhumans" className="text-blue" target="_blank">Pablo Stanley</a>
+              Artes feitas por{" "}
+              <a
+                href="https://pablostanley.gumroad.com/l/transhumans"
+                className="text-blue"
+                target="_blank"
+              >
+                Pablo Stanley
+              </a>
             </p>
           </div>
         </ul>
