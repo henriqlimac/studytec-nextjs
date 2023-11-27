@@ -4,7 +4,7 @@ import { useState } from "react";
 import CardComponent from "./components/card";
 import PlanModal from "./components/modal";
 
-import { useDisclosure } from "@nextui-org/react";
+import { useDisclosure, Pagination, Button } from "@nextui-org/react";
 
 const CardElements = [
   {
@@ -78,6 +78,7 @@ const CardElements = [
 export default function Plan() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [cardElement, setCardElement] = useState<any>(null);
+  const [currentPage, setCurrentPage] = useState(1);
 
   const openDisclosure = (cardElement: any) => {
     setCardElement(cardElement);
@@ -85,7 +86,10 @@ export default function Plan() {
   };
 
   return (
-    <div className="pt-16 p-4 relative">
+    <div className="pt-20 p-4 relative">
+      <div className="w-full flex flex-col items-center justify-center gap-5">
+        <p className="opacity-50 text-sm">Semana atual: {currentPage}</p>
+      </div>
       <div className="w-full flex flex-col items-center">
         {CardElements.map((props) => (
           <>
@@ -118,6 +122,38 @@ export default function Plan() {
           }}
         />
       ) : null}
+      <div className="py-6 w-full flex flex-col items-center justify-center gap-5">
+        <Pagination
+          total={20}
+          color="success"
+          page={currentPage}
+          onChange={setCurrentPage}
+        />
+        <div className="flex gap-2 w-full max-w-[300px] md:hidden">
+          <Button
+            fullWidth
+            size="sm"
+            variant="flat"
+            color="success"
+            onPress={() =>
+              setCurrentPage((prev) => (prev > 1 ? prev - 1 : prev))
+            }
+          >
+            Anterior
+          </Button>
+          <Button
+            fullWidth
+            size="sm"
+            variant="flat"
+            color="success"
+            onPress={() =>
+              setCurrentPage((prev) => (prev < 12 ? prev + 1 : prev))
+            }
+          >
+            Próximo
+          </Button>
+        </div>
+      </div>
     </div>
   );
 }

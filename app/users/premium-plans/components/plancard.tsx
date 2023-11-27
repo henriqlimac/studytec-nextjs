@@ -35,7 +35,7 @@ export default function PlanCard({
   const router = useRouter();
 
   return (
-    <div className="bg-primary w-full max-w-[300px] h-[500px] flex flex-col gap-6 p-8 text-center rounded-lg flex-grow relative shadow-none border-border border-1 animate-appearance-in">
+    <div className="bg-primary w-full max-w-[300px] h-[500px] flex flex-col gap-6 p-8 text-center rounded-lg flex-grow relative shadow-none border-border border-1">
       <div className="flex flex-col gap-4 h-full">
         <h1 className={`text-2xl font-semibold ${color}`}>{title}</h1>
         <p>{description}</p>

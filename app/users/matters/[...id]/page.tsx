@@ -127,21 +127,14 @@ export default function Matter() {
   ];
 
   return (
-    <div className="p-5 min-h-screen max-h-screen transition-all">
+    <div className="p-5 min-h-screen max-h-screen transition-all flex flex-col items-center justify-center">
       {pageElements
         .filter((x) => x.id == id)
         .map((params) => (
           <div
             key={params.id}
-            className="flex flex-col gap-7 justify-center w-full pt-14"
+            className="flex flex-col gap-7 justify-center items-center w-full pt-14 text-center"
           >
-            <button
-              className="text-blue flex gap-1 items-center hover:underline"
-              onClick={() => router.push("/users/matters")}
-            >
-              <BiChevronLeft />
-              VOLTAR
-            </button>
             <h1 className="text-xl font-medium xl:text-2xl">
               Esses serão seus professores da matéria de <br />
               <strong className={`uppercase text-3xl ${params.color}`}>
@@ -198,6 +191,13 @@ export default function Matter() {
                 <p>{params.p4}</p>
               </div>
             </div>
+            <button
+              className="text-blue flex gap-1 items-center underline md:no-underline md:hover:underline md:active:underline"
+              onClick={() => router.push("/users/matters")}
+            >
+              <BiChevronLeft />
+              VOLTAR
+            </button>
           </div>
         ))}
       {isNaN(id) || id > 6 ? (

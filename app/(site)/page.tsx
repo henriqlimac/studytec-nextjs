@@ -1,5 +1,7 @@
 "use client";
 
+import "../themes/animations.css"
+
 import Image from "next/image";
 import Header from "./components/header";
 
@@ -15,7 +17,7 @@ export default function Home() {
         <div className="section flex items-center justify-center flex-col text-center gap-20 min-h-screen w-full pt-20 relative z-10">
           <div className="flex flex-col items-center justify-center gap-6 p-5">
             <div className="flex flex-col items-center justify-center gap-2">
-              <p className="text-blue tracking-wider font-medium">
+              <p className="text-blue tracking-wider font-medium frombottom">
                 SUA NOVA PLATAFORMA DE ESTUDOS
               </p>
               <h1 className="text-4xl font-semibold">

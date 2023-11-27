@@ -181,21 +181,21 @@ export default function Users() {
           </div>
         </div>
         <div className="flex 2xl:hidden w-full flex-col md:flex-row gap-5 relative">
-          <div className="w-full bg-blue text-white rounded-lg flex justify-between items-center gap-2 p-10 relative border-border border-1">
-            <div>
+          <div className="w-full bg-blue text-white rounded-lg flex flex-col md:flex-row justify-between items-center gap-6 p-10 relative border-border border-1">
+            <div className="w-full">
               <h2>
                 Gosta da nossa plataforma ou acha que tem algo a melhorar?
               </h2>
               <p>Nos mande um feedback!</p>
             </div>
-            <div>
+            <div className="w-full md:w-auto">
               {" "}
               <Link
                 href={
                   "https://mail.google.com/mail/u/0/#inbox?compose=DmwnWtMjKSKwxFgsMCwPWVtNjRMTHWRLkplJCBwJkQRvvmNGkzrncqPSzLhLvjFrLMtNvXxQHMVB"
                 }
               >
-                <Button className="bg-success text-white font-semibold">
+                <Button className="bg-success text-white font-semibold w-full md:w-auto">
                   ENVIAR FEEDBACK
                 </Button>
               </Link>
