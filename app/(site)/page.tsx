@@ -1,11 +1,19 @@
 "use client";
 
-import "../themes/animations.css"
+import "../themes/animations.css";
 
-import Image from "next/image";
+import { Image } from "@nextui-org/react";
 import Header from "./components/header";
 
-import { p1, p2, example1, example2, wave, grid, mode } from "@/public/imgs";
+import {
+  hero1,
+  hero2,
+  hero3,
+  example1,
+  example2,
+  grid,
+  mode,
+} from "@/public/imgs";
 import Carousel from "./components/carousel";
 import Footer from "./components/footer";
 
@@ -40,33 +48,29 @@ export default function Home() {
           <div className="images flex items-center justify-center w-full h-full overflow-hidden pb-20">
             <Image
               width={325}
-              height={330}
+              height={333}
               alt="Image about (something)"
-              src={p1}
-              className="shadow-2xl relative rounded-md hidden md:block select-none"
+              src={hero1.src}
+              className="shadow-2xl relative rounded-md hidden md:inline-block select-none"
+              isBlurred
             />
             <Image
               width={325}
               height={450}
               alt="Image about (something)"
-              src={p2}
+              src={hero3.src}
               className="shadow-2xl relative z-10 rounded-md select-none"
+              isBlurred
             />
             <Image
               width={325}
-              height={330}
+              height={333}
               alt="Image about (something)"
-              src={p1}
-              className="shadow-2xl relative rounded-md hidden md:block select-none"
+              src={hero2.src}
+              className="shadow-2xl relative rounded-md hidden md:inline-block select-none"
+              isBlurred
             />
           </div>
-        </div>
-        <div className="w-full h-60 relative">
-          <Image
-            alt=""
-            src={wave}
-            className="w-full absolute bottom-0 select-none"
-          />
         </div>
         <div className="section bg-slate-900 text-white min-h-[600px] flex flex-col justify-center items-center gap-10 text-center xl:text-left xl:flex-row">
           <div className="description w-full max-w-md flex flex-col gap-4 px-5">
@@ -88,25 +92,18 @@ export default function Home() {
               width={600}
               height={600}
               alt=""
-              src={grid}
+              src={grid.src}
               className="opacity-20 absolute right-0 hidden lg:right-auto md:block"
             />
             <Image
               alt=""
-              src={mode}
-              className="z-10 top-10 left-10 md:relative"
+              src={mode.src}
+              className="z-10 top-10 left-0 md:relative md:left-10"
             />
           </div>
         </div>
-        <div className="w-full h-60 relative">
-          <Image
-            alt=""
-            src={wave}
-            className="w-full absolute rotate-180 select-none"
-          />
-        </div>
         <div className="section w-full min-h-screen relative z-10 flex items-center flex-col gap-10 justify-center p-10 md:flex-row">
-          <Image alt="" src={example1} className="hidden md:block" />
+          <Image alt="" src={example1.src} className="hidden md:block" />
           <div className="description max-w-lg text-center md:text-right flex flex-col">
             <div className="text py-20">
               <h1 className="font-semibold text-4xl">
@@ -118,8 +115,8 @@ export default function Home() {
               </p>
             </div>
             <div className="flex flex-col gap-5">
-              <Image alt="" src={example1} className="w-full md:hidden" />
-              <Image alt="" src={example2} className="" />
+              <Image alt="" src={example1.src} className="w-full md:hidden" />
+              <Image alt="" src={example2.src} className="" />
             </div>
           </div>
         </div>
