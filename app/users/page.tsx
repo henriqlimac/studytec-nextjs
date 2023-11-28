@@ -40,7 +40,7 @@ const ExercisesList = [
 
 export default function Users() {
   const [isFinished, setIsFinished] = useState(false);
-  const progress = 11;
+  const progress = 0;
 
   const weeklyPercentageProgress = progress * 8.3;
   const totalPercentageProgress = progress * 0.83;
