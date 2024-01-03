@@ -4,23 +4,6 @@ import "@/app/themes/scrollbar.css";
 const collabProps = [
   {
     id: 1,
-    image: "henriquelima",
-    name: "Henrique Lima",
-    at: "@henriqlimac",
-    tag1: 1,
-    tag2: 2,
-    tag3: 0,
-    description:
-      "Estudante da ETEC Maria Cristina Medeiros, 'Fullstack Web Developer' e principal desenvolvedor da plataforma StudyTec",
-    network1: 1,
-    link1: "https://github.com/henriqlimac",
-    network2: 2,
-    link2: "https://twitter.com/darkinni",
-    network3: 3,
-    link3: "https://www.instagram.com/darkinnii/",
-  },
-  {
-    id: 1,
     image: "danigaeta",
     name: "Daniela Gaeta",
     at: "@danxvs_",
@@ -36,7 +19,7 @@ const collabProps = [
     link3: "https://www.instagram.com/danxvs_",
   },
   {
-    id: 1,
+    id: 2,
     image: "gustavoreis",
     name: "Gustavo Reis",
     at: "@_reisgustavo",
@@ -52,7 +35,7 @@ const collabProps = [
     link3: "https://www.instagram.com/_reisgustavo",
   },
   {
-    id: 1,
+    id: 3,
     image: "camilecampos",
     name: "Camile Campos",
     at: "@camiille_campos",
@@ -68,7 +51,7 @@ const collabProps = [
     link3: "https://www.instagram.com/camiille_campos",
   },
   {
-    id: 1,
+    id: 4,
     image: "gustavodamaso",
     name: "Gustavo Damaso",
     at: "@damaasoo",
